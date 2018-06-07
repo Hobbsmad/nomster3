@@ -1,0 +1,15 @@
+current directory: /Users/madelynhobbs/wonderland/vendor/bundle/gems/bootsnap-1.3.0/ext/bootsnap
+/Users/madelynhobbs/.rvm/rubies/ruby-2.5.1/bin/ruby -r ./siteconf20180607-6972-1i8bd7e.rb extconf.rb
+creating Makefile
+
+current directory: /Users/madelynhobbs/wonderland/vendor/bundle/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/madelynhobbs/wonderland/vendor/bundle/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/madelynhobbs/wonderland/vendor/bundle/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20180607-6972-1jzcrj2/bootsnap
