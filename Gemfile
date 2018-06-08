@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '4.0.0.alpha6'
 gem 'jquery-rails'
 gem 'will_paginate', '~> 3.1.0'
+gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
