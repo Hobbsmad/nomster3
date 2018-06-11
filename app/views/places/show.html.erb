@@ -1,3 +1,4 @@
+
 <div class="booyah-box col-10 offset-1">
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
@@ -28,7 +29,20 @@
     <div id="map"></div>
 <% end %>
 
-<br />
+<div class="booyah-box col-10 offset-1">
+  <h1>Photos</h1>
+  <% @place.photos.each do |photos| %>
+    <%= image_tag photos.picture, class: "image-class" %>
+    <%= photos.caption %>
+  <% end %>
+  <%= simple_form_for @photo, url: place_photos_path(@place.id) do |f| %>
+  <br />
+    <div class="col-12 col-sm-6">
+      <%= f.file_field :picture %>
+      <%= f.submit "upload" %>
+    </div>
+  <% end %>
+</div>
 
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
@@ -72,15 +86,15 @@
 <div class="row">
 <% @place.comments.each do |comment| %>
 <div class="col-12 col-sm-6">
-        <blockquote>
-          <% if comment.humanized_rating.present? %>
-            <b><%= comment.humanized_rating %></b> -
-          <% end %>
-          <%= comment.message %>
-          <br />
-          <small><%= comment.user.email %></small>
-        </blockquote>
-      </div>
+    <blockquote>
+      <% if comment.humanized_rating.present? %>
+        <b><%= comment.humanized_rating %></b> -
+      <% end %>
+      <%= comment.message %>
+      <br />
+      <small><%= comment.user.email %></small>
+    </blockquote>
+    </div>
     <% end %>
   </div>
 </div>
